@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <RecoilRoot>
       <ApolloSetting>
         <>
+          {/* test */}
           <Global styles={globalStyles} />
           <Layout>
             <Component {...pageProps} />
