@@ -5,9 +5,7 @@ import LayoutNavigation from "./navigation/LayoutNavigation.container";
 import styled from "@emotion/styled";
 import LayoutFooter from "./footer";
 
-const HIDDEN_LAYOUT = [
-  '/login',
-]
+const HIDDEN_LAYOUT = ["/login", "/signUp"];
 
 const Body = styled.div`
   display: flex;
@@ -25,13 +23,13 @@ export default function Layout(props: ILayoutProps) {
 
   return (
     <>
-      {isHiddenLayout ? 
+      {isHiddenLayout ? (
         <>
           <LayoutHeader />
           <Body>{props.children}</Body>
           <LayoutFooter />
         </>
-        : 
+      ) : (
         <>
           <LayoutHeader />
           <LayoutBanner />
@@ -39,7 +37,7 @@ export default function Layout(props: ILayoutProps) {
           <Body>{props.children}</Body>
           <LayoutFooter />
         </>
-      }
+      )}
     </>
   );
 }
