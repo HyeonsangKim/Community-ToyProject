@@ -15,13 +15,13 @@ import {
   FETCH_BOARD,
   LIKE_BOARD,
 } from "./BoardDetail.queries";
-import { MouseEvent } from "react";
 import { FETCH_BOARDS } from "../list/BoardList.queries";
+import { Modal } from "antd";
 
 export default function BoardDetail() {
   const router = useRouter();
   if (typeof router.query.boardId !== "string") {
-    alert("올바르지 않은 게시글 아이디입니다.");
+    Modal.error({content: "올바르지 않은 게시글 아이디입니다."});
     void router.push("/");
     return <></>;
   }
