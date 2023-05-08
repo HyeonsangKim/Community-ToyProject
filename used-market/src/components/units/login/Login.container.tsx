@@ -1,14 +1,15 @@
 import { useForm } from 'react-hook-form';
 import { ILoginFormData } from "./Login.types";
-import * as S from "./Login.styles";
 import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { gql, useMutation } from '@apollo/client';
+import { useMutation } from '@apollo/client';
 import { Modal } from 'antd';
 import { useRecoilState } from 'recoil';
 import { accessTokenState } from '../../../commons/store';
-import { IMutation, IMutationLoginUserArgs, IMutationLoginUserExampleArgs } from '../../../commons/types/generated/types';
+import { IMutation, IMutationLoginUserArgs } from '../../../commons/types/generated/types';
 import { useRouter } from 'next/router';
+import { LOGIN_USER } from './Login.queries';
+import LoginUI from './Login.presenter';
 
 const schema = yup.object({
   email: yup
@@ -21,14 +22,6 @@ const schema = yup.object({
     .max(15, '비밀번호는 최대 15자리까지 입력해주세요.')
     .required('비밀번호는 필수 입력 사항입니다.'),
 });
-
-const LOGIN_USER = gql`
-  mutation loginUser($email: String!, $password: String!) {
-    loginUser(email: $email, password: $password){
-      accessToken
-    }
-  }
-`;
 
 export default function Login() {
   const router = useRouter();
@@ -62,21 +55,11 @@ export default function Login() {
   }
 
   return (
-    <S.Wrapper>
-      <S.InputWrap>
-        <S.LoginTitle>LOGIN</S.LoginTitle>
-        <form onSubmit={handleSubmit(onClickSubmit)}>
-          <S.LoignInputWrap>
-            <S.LoginInput type="email" placeholder="이메일을 입력해주세요" {...register('email')} />
-            <S.InputErrorMsg>{formState.errors.email?.message}</S.InputErrorMsg>
-          </S.LoignInputWrap>
-          <S.LoignInputWrap>
-            <S.LoginInput type="password" placeholder="비밀번호를 입력해주세요" {...register('password')} />
-            <S.InputErrorMsg>{formState.errors.password?.message}</S.InputErrorMsg>
-          </S.LoignInputWrap>
-          <S.LoginButton>로그인하기</S.LoginButton>
-        </form>
-      </S.InputWrap>
-    </S.Wrapper>
-  )
+    <LoginUI
+      onClickSubmit={onClickSubmit}
+      register={register}
+      handleSubmit={handleSubmit}
+      formState={formState}
+    />
+  );
 }
