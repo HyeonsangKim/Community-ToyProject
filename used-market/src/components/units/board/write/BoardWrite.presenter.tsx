@@ -111,9 +111,6 @@ export default function BoardWriteUI(props: IBoardWriteUIProps) {
           </S.SubmitButton>
         </S.ButtonWrapper>
       </S.Wrapper>
-
-      <input type='text' value='철수' defaultValue='영희' />
-      <div>안녕하세요~</div>
     </>
   );
 }

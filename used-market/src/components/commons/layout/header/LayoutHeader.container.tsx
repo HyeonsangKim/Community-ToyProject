@@ -4,12 +4,7 @@ import { useRecoilState } from "recoil";
 import { accessTokenState } from "../../../../commons/store";
 import { gql, useMutation } from "@apollo/client";
 import { IMutation } from "../../../../commons/types/generated/types";
-
-const LOGOUT_USER = gql`
-  mutation {
-    logoutUser
-  }
-`;
+import { LOGOUT_USER } from "./LayoutHeader.queries";
 
 export default function LayoutHeader() {
   const router = useRouter();
@@ -17,7 +12,7 @@ export default function LayoutHeader() {
   const [accessToken, setAccessToken] = useRecoilState(accessTokenState);
 
   const onClickLogo = () => {
-    void router.push("/");
+    void router.push("/boards");
   };
 
   const onClickLogin = () => {

@@ -5,7 +5,7 @@ import LayoutNavigation from "./navigation/LayoutNavigation.container";
 import styled from "@emotion/styled";
 import LayoutFooter from "./footer";
 
-const HIDDEN_LAYOUT = ["/login", "/signUp"];
+const HIDDEN_LAYOUT = ["/login", "/signUp", "/mypage"];
 
 const Body = styled.div`
   display: flex;

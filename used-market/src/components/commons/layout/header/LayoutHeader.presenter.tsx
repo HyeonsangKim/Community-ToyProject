@@ -10,7 +10,7 @@ export default function LayoutHeaderUI(props: ILayoutHeaderProps) {
   return (
     <Wrapper>
       <InnerWrapper>
-        <InnerLogo onClick={props.onClickLogo}>Used Market</InnerLogo>
+        <InnerLogo onClick={props.onClickLogo}>Open Social</InnerLogo>
         <div>
           <InnerButton
             onClick={

@@ -4,7 +4,7 @@ import { ILayoutNavigationUIProps } from "./LayoutNavigation.types";
 
 const NAVIGATION_MENUS = [
   {id: '/boards', name: '자유게시판'},
-  {id: '/market', name: '중고마켓' },
+  {id: '/openapi', name: 'OPEN API' },
   {id: '/mypage', name: '마이페이지'}
 ];
 
