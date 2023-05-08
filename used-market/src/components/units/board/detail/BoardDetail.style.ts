@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { LikeOutlined, DislikeOutlined } from "@ant-design/icons";
-import ReactPlayer from "react-player";
+import ReactPlayer from "react-player/youtube";
 
 export const Wrapper = styled.div`
   width: 1200px;

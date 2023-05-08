@@ -5,7 +5,7 @@ export const FETCH_BOARD = gql`
     fetchBoard(boardId: $boardId) {
       writer
       title
-      contetns
+      contents
       youtubeUrl
       boardAddress {
         zipcode

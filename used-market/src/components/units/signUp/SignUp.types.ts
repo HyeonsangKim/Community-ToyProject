@@ -8,8 +8,8 @@ export interface ISignUpType {
 
 export interface ISignUpUIProps {
   onSubmit: (data: ISignUpType) => void;
-  onChangePassword: (event: ChangeEvent<HTMLElement>) => void;
-  onChangeRePassword: (event: ChangeEvent<HTMLElement>) => void;
+  onChangePassword: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChangeRePassword: (event: ChangeEvent<HTMLInputElement>) => void;
   register: any;
   handleSubmit: any;
   formState: any;
