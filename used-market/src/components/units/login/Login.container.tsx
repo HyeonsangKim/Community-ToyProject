@@ -48,7 +48,7 @@ export default function Login() {
         return;
       }
       setAccessToken(accessToken);
-      void router.push('/');
+      void router.push('/boards');
     } catch(error) {
         if (error instanceof Error) Modal.error({ content: error.message });
     }

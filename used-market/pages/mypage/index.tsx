@@ -1,11 +1,10 @@
 import { withAuth } from "../../src/components/commons/hocs/withAuth";
+import Mypage from "../../src/components/units/mypage/Mypage.container";
 
 function MyProfilePage() {
 
   return (
-    <>
-      마이페이지
-    </>
+    <Mypage />
   );
 }
 
