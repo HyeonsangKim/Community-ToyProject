@@ -13,15 +13,19 @@ export default function MypageUI(props: IMypageUIProps) {
             <h2>회원정보수정</h2>
             <S.ModalImageWrapper>
               {props.picture ? (
-                <S.Image 
-                  onClick={props.onClickUpload} 
-                  src={`https://storage.googleapis.com/${props.picture}`} 
-                />
+                <S.ImageBox>
+                  <S.Image 
+                    onClick={props.onClickUpload} 
+                    src={`https://storage.googleapis.com/${props.picture}`} 
+                  />
+                </S.ImageBox>
               ) : (
-                <S.Image 
-                  onClick={props.onClickUpload} 
-                  src={props.data?.fetchUserLoggedIn.picture ? `https://storage.googleapis.com/${props.data?.fetchUserLoggedIn.picture}` : "/images/avatar.png" } 
-                />
+                <S.ImageBox>
+                  <S.Image 
+                    onClick={props.onClickUpload} 
+                    src={props.data?.fetchUserLoggedIn.picture ? `https://storage.googleapis.com/${props.data?.fetchUserLoggedIn.picture}` : "/images/avatar.png" } 
+                  />
+                </S.ImageBox>
               )}
               <S.InvisibleFileInput>
                 <input type="file" onChange={props.onChangePicture} ref={props.fileRef}  />
@@ -64,13 +68,17 @@ export default function MypageUI(props: IMypageUIProps) {
         <S.Title>마이페이지</S.Title>
         <S.ImageWrapper>
           {props.data?.fetchUserLoggedIn.picture ? (
-            <S.Image 
-              src={`https://storage.googleapis.com/${props.data?.fetchUserLoggedIn.picture}`} 
-            />
+            <S.ImageBox>
+              <S.Image 
+                src={`https://storage.googleapis.com/${props.data?.fetchUserLoggedIn.picture}`} 
+              />
+            </S.ImageBox>
           ) : (
-            <S.Image 
-              src="/images/avatar.png" 
-            />
+            <S.ImageBox>
+              <S.Image 
+                src="/images/avatar.png" 
+              />
+            </S.ImageBox>
           )}
           <S.Name>{props.data?.fetchUserLoggedIn?.name}님</S.Name>
         </S.ImageWrapper>

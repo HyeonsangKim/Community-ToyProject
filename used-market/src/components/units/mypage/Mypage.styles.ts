@@ -18,9 +18,16 @@ export const ImageWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 `;
-export const Image = styled.img`
-  width: 15%;
+
+export const ImageBox = styled.div`
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
+  overflow: hidden;
+`;
+
+export const Image = styled.img`
+  width: 100%;
   cursor: pointer;
 `;
 
