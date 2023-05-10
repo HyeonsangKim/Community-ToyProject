@@ -1,4 +1,4 @@
-import CommentListItem from "./CommentList.presenterItem";
+import CommentListItem from "./CommentList.presenteritem";
 import { ICommentListUIProps } from "./CommentList.types";
 
 export default function CommentListUI(props: ICommentListUIProps) {

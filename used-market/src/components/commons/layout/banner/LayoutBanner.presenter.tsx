@@ -16,13 +16,13 @@ export default function LayoutBannerUI() {
     <Wrapper>
       <Slider {...settings}>
         <div>
-          <SliderItem src="/images/layout/banner01.png" />
+          <SliderItem src='/images/layout/banner01.jpg' />
         </div>
         <div>
-          <SliderItem src="/images/layout/banner01.png" />
+          <SliderItem src='/images/layout/banner01.jpg' />
         </div>
         <div>
-          <SliderItem src="/images/layout/banner01.png" />
+          <SliderItem src='/images/layout/banner01.jpg' />
         </div>
       </Slider>
     </Wrapper>

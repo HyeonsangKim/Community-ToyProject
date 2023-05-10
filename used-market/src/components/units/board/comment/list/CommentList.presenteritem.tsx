@@ -68,7 +68,7 @@ export default function CommentListItem(props: ICommentListItemProps) {
           onCancel={onClickToggleDeleteModal}
         >
           <div>비밀번호 입력: </div>
-          <PasswordInput onChange={onChangeMyPassword} />
+          <PasswordInput type='password' onChange={onChangeMyPassword} />
         </PasswordModal>
       )}
       {!isEdit && (

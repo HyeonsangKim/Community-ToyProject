@@ -9,7 +9,8 @@ import { FETCH_USER_LOGGED_IN, LOGOUT_USER } from "./LayoutHeader.queries";
 export default function LayoutHeader() {
   const router = useRouter();
   const [logoutUser] = useMutation<Pick<IMutation, "logoutUser">>(LOGOUT_USER);
-  const { data } = useQuery<Pick<IQuery, 'fetchUserLoggedIn'>>(FETCH_USER_LOGGED_IN);
+  const { data } =
+    useQuery<Pick<IQuery, "fetchUserLoggedIn">>(FETCH_USER_LOGGED_IN);
   const [accessToken, setAccessToken] = useRecoilState(accessTokenState);
 
   const onClickLogo = () => {
@@ -35,9 +36,8 @@ export default function LayoutHeader() {
   };
 
   const onClickMoveToMypage = () => {
-    void router.push('/mypage');
-  }
-
+    void router.push("/mypage");
+  };
   return (
     <LayoutHeaderUI
       data={data}

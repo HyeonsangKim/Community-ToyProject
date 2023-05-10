@@ -3,9 +3,8 @@ import { MenuItem, Wrapper } from "./LayoutNavigation.styles";
 import { ILayoutNavigationUIProps } from "./LayoutNavigation.types";
 
 const NAVIGATION_MENUS = [
-  {id: '/boards', name: '자유게시판'},
-  {id: '/openapi', name: 'OPEN API' },
-  {id: '/mypage', name: '마이페이지'}
+  { id: "/boards", name: "자유게시판" },
+  { id: "/mypage", name: "마이페이지" },
 ];
 
 export default function LayoutNavigationUI(props: ILayoutNavigationUIProps) {
