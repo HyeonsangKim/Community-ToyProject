@@ -1,7 +1,7 @@
 # 커뮤니티 사이트 프로젝트    
 사용 언어 : Next.js, React, Apollo Client, Graph QL  
 상태 관리: Recoil  
-사용 라이브러리 : Lodash, React-daum-postcode, React-hook-form, React-player, React-slick, Yup  
+사용 라이브러리 : Lodash, React-daum-postcode, React-hook-form, React-player, React-slick, Yup, Emotion, ant-design
 
 ## 로그인 기능  
 ![toy](https://github.com/HyeonsangKim/UsedMarket-ToyProject/assets/62788445/5b932eca-c6f4-4677-a223-cdfdd9266004)    
