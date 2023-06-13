@@ -1,7 +1,8 @@
 # 커뮤니티 사이트 프로젝트    
-사용 언어 : Next.js, React, Apollo Client, Graph QL  
+사용 언어: Next.js, React, Apollo Client, Graph QL  
 상태 관리: Recoil  
-사용 라이브러리 : Lodash, React-daum-postcode, React-hook-form, React-player, React-slick, Yup, Emotion, ant-design
+사용 라이브러리: Lodash, React-daum-postcode, React-hook-form, React-player, React-slick, Yup, Emotion, ant-design
+로그인: JWT토큰으로 구현
 
 # -- 구동영상 --  
 
